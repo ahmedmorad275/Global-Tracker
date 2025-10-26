@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Tracker</title>
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- External CSS Style -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="dark min-h-screen">
+    <!-- Nav Bar -->
+    <nav
+      class="text[var(--accent)] sticky top-0 z-50 p-2.5 bg-[hsla(217,21%,12%,1)] border-b-[1px] border-[var(--border)]">
+      <!-- Navbar Content -->
+      <div
+        class="mobile-show flex items-center justify-between container mx-auto">
+        <!-- Nav Left Part -->
+        <div class="nav-left flex gap-2.5 items-center font-bold">
+          <!-- Logo -->
+          <div class="logo py-0.5 px-3 rounded-md">
+            <span class="text-black text-xl">₿</span>
+          </div>
+          <!-- Title -->
+          <div class="nav-title">
+            <span>Global Tracker</span>
+          </div>
+        </div>
+        <!-- Wide Screen Buttons -->
+        <div class="nav-center">
+          <div
+            class="menu-on-mobile mt-2 hidden md:flex gap-1 text-sm font-medium">
+            <button
+              class="cursor-pointer active block rounded-xl transition-colors duration-300 hover:opacity-90 transition-opacity hover:bg-[var(--accent)] hover:text-black text-white px-3.5 py-2 w-fit text-left">
+              Home
+            </button>
+            <button
+              class="cursor-pointer block rounded-xl transition-colors duration-300 hover:bg-[var(--accent)] hover:text-black text-white px-3.5 py-2 w-fit text-left">
+              Currency Converter
+            </button>
+            <button
+              class="cursor-pointer block rounded-xl transition-colors duration-300 hover:bg-[var(--accent)] hover:text-black text-white px-3.5 py-2 w-fit text-left">
+              Gold Price
+            </button>
+            <button
+              class="cursor-pointer block rounded-xl transition-colors duration-300 hover:bg-[var(--accent)] hover:text-black text-white px-3.5 py-2 w-fit text-left">
+              About
+            </button>
+          </div>
+        </div>
+        <!-- Nav Right Part -->
+        <div class="nav-right flex items-center gap-2.5 text-white">
+          <!-- Theme Button -->
+          <div
+            class="toggle-theme bg-[var(--background)] p-1.5 border-2 border-[var(--border)] rounded-xl cursor-pointer hover:bg-[var(--accent)] hover:scale-110 hover:text-black transition-all">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-sun h-5 w-5">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+          </div>
+          <!-- Menu Show Button -->
+          <div
+            id="menuShowBtn"
+            class="md:hidden menu-buttons bg-[var(--background)] p-1.5 border-2 border-[var(--border)] rounded-xl cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-menu h-5 w-5">
+              <line x1="4" x2="20" y1="12" y2="12"></line>
+              <line x1="4" x2="20" y1="6" y2="6"></line>
+              <line x1="4" x2="20" y1="18" y2="18"></line>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Menu Buttons -->
+      <div
+        id="menuOnMobile"
+        class="menu-on-mobile container mx-auto mt-4 hidden md:hidden">
+        <button
+          class="active block rounded-xl hover:bg-amber-500 hover:text-black text-white p-2 w-full text-left">
+          Home
+        </button>
+        <button
+          class="block rounded-xl hover:bg-amber-500 hover:text-black text-white p-2 w-full text-left">
+          Currency Converter
+        </button>
+        <button
+          class="block rounded-xl hover:bg-amber-500 hover:text-black text-white p-2 w-full text-left">
+          Gold Price
+        </button>
+        <button
+          class="block rounded-xl hover:bg-amber-500 hover:text-black text-white p-2 w-full text-left">
+          About
+        </button>
+      </div>
+    </nav>
+    <!-- Main Container -->
+    <div>
+      <!-- Hero Section -->
+      <section
+        class="hero-section py-20 bg-[hsla(217,21%,12%,1)] px-4 overflow-hidden">
+        <div
+          class="glance-text flex gap-2.5 items-center px-4 py-2 mx-auto rounded-full mb-6 w-fit text-[var(--accent)]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-trending-up w-4 h-4 text-accent">
+            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+            <polyline points="16 7 22 7 22 13"></polyline>
+          </svg>
+          <span class="text-sm font-medium">Live Market Data</span>
+        </div>
+        <h1
+          class="main-title-text text-center text-5xl mb-6 mx-auto w-fit md:text-6xl font-bold text-white leading-tight">
+          Global Gold & <span class="inline-block">Currency Tracker</span>
+        </h1>
+        <p class="text-xl text-center text-[#9da3af] mb-8 max-w-2xl mx-auto">
+          Real-time currency conversion and live gold prices from markets
+          worldwide. Track precious metals and exchange rates with precision.
+        </p>
+        <div
+          class="heaser-stats flex flex-col items-center gap-2.5 md:flex-row justify-center">
+          <div
+            class="box border-[var(--border)] border-2 w-fit px-6 py-3 rounded-lg bg-[var(--card)] flex items-center gap-2.5 text-[var(--accent)]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-coins w-5 h-5 text-accent">
+              <circle cx="8" cy="8" r="6"></circle>
+              <path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path>
+              <path d="M7 6h1v4"></path>
+              <path d="m16.71 13.88.7.71-2.82 2.82"></path>
+            </svg>
+            <div class="text">
+              <p class="text-xs text-[var(--muted-foreground)]">
+                150+ Currencies
+              </p>
+              <p class="font-semibold text-white text-sm">
+                Live Exchange Rates
+              </p>
+            </div>
+          </div>
+          <div
+            class="box border-[var(--border)] border-2 w-fit px-6 py-3 rounded-lg bg-[var(--card)] flex items-center gap-2.5 text-[var(--accent)]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-coins w-5 h-5 text-accent">
+              <circle cx="8" cy="8" r="6"></circle>
+              <path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path>
+              <path d="M7 6h1v4"></path>
+              <path d="m16.71 13.88.7.71-2.82 2.82"></path>
+            </svg>
+            <div class="text">
+              <p class="text-xs text-[var(--muted-foreground)]">
+                24k, 22k, 18k
+              </p>
+              <p class="font-semibold text-white text-sm">
+                Real-time Gold Prices
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Currency Exchange Section -->
+      <section
+        class="py-16 px-4 currency-exchange-container container mx-auto max-w-4xl text-white">
+        <div class="mb-12 text-center">
+          <h2 class="mb-4 text-4xl font-bold">Currency Converter</h2>
+          <p class="text-[var(--muted-foreground)] w-80 mx-auto md:w-full">
+            Convert between 150+ world currencies with real-time exchange rates
+          </p>
+        </div>
+        <div class="currency-exchange-container container mx-auto bg-[hsla(217,21%,12%,1)] py-6 px-6 border border-[var(--border)] rounded-lg">
+          <h3 class="font-bold">Live Currency Exchange</h3>
+          <p class="text-sm text-[var(--muted-foreground)] mb-6">Last updated: 10/26/2025, 9:41:19 PM</p>
+          <div class="exchange-details">
+            <div class="exchange-amount flex flex-col gap-2.5 mb-4">
+              <label for="amount" class="text-sm font-semibold">Amount</label>
+              <input class="border bg-[var(--background)] py-1.5 px-2.5 rounded-lg border-[var(--border)] focus:border-2 focus:border-[var(--accent)] outline-none " type="number" name="amount" id="amount" placeholder="Enter amount" value="1"/>
+            </div>
+            <div class="exchange-from flex flex-col gap-2.5 mb-4">
+              <label for="from" class="text-sm font-semibold">From</label>
+              <select class="border bg-[var(--background)] py-1.5 px-2.5 rounded-lg border-[var(--border)] focus:border-2 focus:border-[var(--accent)] outline-none " name="from" id="transfer-from">
+                <option value="usd">$ USD - US Dollar</option>
+              </select>
+            </div>
+            <div class="exchange-button">
+              <button class="bg-[var(--background)] rounded-full p-2.5 mt-8 cursor-pointer hover:bg-[var(--accent)] hover:text-black transition-all duration-300 hover:rotate-180  mx-auto block">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-arrow-right-left w-5 h-5">
+                  <path d="m16 3 4 4-4 4"></path>
+                  <path d="M20 7H4"></path>
+                  <path d="m8 21-4-4 4-4"></path>
+                  <path d="M4 17h16"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="exchange-to flex flex-col gap-2.5 mb-4">
+              <label for="to" class="text-sm font-semibold">To</label>
+              <select class="border bg-[var(--background)] py-1.5 px-2.5 rounded-lg border-[var(--border)] focus:border-2 focus:border-[var(--accent)] outline-none " name="to" id="transfer-to">
+                <option value="eur">€ EUR - Euro</option>
+              </select>
+              <button id="converCurrency" class="mt-2 border py-1.5 px-2.5 rounded-lg border-[var(--border)] focus:border-2 focus:border-[var(--accent)] outline-none ">Convert</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Gold Price Section -->
+
+      <!-- About us Section -->
+
+      <!-- Footer -->
+
+      <!-- Rights -->
+
+      <!-- Load JavaScript File -->
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
