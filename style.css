@@ -119,3 +119,20 @@ nav {
   border: none;
   box-shadow: 0px 2px 6px hsl(var(--gold-start));
 }
+.gold-weight {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--gold-start)),
+    hsl(var(--gold-mid)),
+    hsl(var(--gold-end))
+  );
+  color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  width: fit-content;
+}
+.gold-card:hover {
+  box-shadow: 0 10px 30px -5px hsl(45 100 60 / 0.3);
+}

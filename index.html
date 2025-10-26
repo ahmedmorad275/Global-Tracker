@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Global Tracker</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
     <!-- Font Awesome CDN -->
     <link
       rel="stylesheet"
@@ -225,22 +226,35 @@
             Convert between 150+ world currencies with real-time exchange rates
           </p>
         </div>
-        <div class="currency-exchange-container container mx-auto bg-[hsla(217,21%,12%,1)] py-6 px-6 border border-[var(--border)] rounded-lg">
+        <div
+          class="currency-exchange-container container mx-auto bg-[hsla(217,21%,12%,1)] py-6 px-6 border border-[var(--border)] rounded-lg">
           <h3 class="font-bold">Live Currency Exchange</h3>
-          <p class="text-sm text-[var(--muted-foreground)] mb-6">Last updated: 10/26/2025, 9:41:19 PM</p>
+          <p class="text-sm text-[var(--muted-foreground)] mb-6">
+            Last updated: 10/26/2025, 9:41:19 PM
+          </p>
           <div class="exchange-details">
             <div class="exchange-amount flex flex-col gap-2.5 mb-4">
               <label for="amount" class="text-sm font-semibold">Amount</label>
-              <input class="border bg-[var(--background)] py-1.5 px-2.5 rounded-lg border-[var(--border)] focus:border-2 focus:border-[var(--accent)] outline-none " type="number" name="amount" id="amount" placeholder="Enter amount" value="1"/>
+              <input
+                class="border bg-[var(--background)] py-1.5 px-2.5 rounded-lg border-[var(--border)] focus:border-2 focus:border-[var(--accent)] outline-none"
+                type="number"
+                name="amount"
+                id="amount"
+                placeholder="Enter amount"
+                value="1" />
             </div>
             <div class="exchange-from flex flex-col gap-2.5 mb-4">
               <label for="from" class="text-sm font-semibold">From</label>
-              <select class="border bg-[var(--background)] py-1.5 px-2.5 rounded-lg border-[var(--border)] focus:border-2 focus:border-[var(--accent)] outline-none " name="from" id="transfer-from">
+              <select
+                class="border bg-[var(--background)] py-1.5 px-2.5 rounded-lg border-[var(--border)] focus:border-2 focus:border-[var(--accent)] outline-none"
+                name="from"
+                id="transfer-from">
                 <option value="usd">$ USD - US Dollar</option>
               </select>
             </div>
             <div class="exchange-button">
-              <button class="bg-[var(--background)] rounded-full p-2.5 mt-8 cursor-pointer hover:bg-[var(--accent)] hover:text-black transition-all duration-300 hover:rotate-180  mx-auto block">
+              <button
+                class="bg-[var(--background)] rounded-full p-2.5 mt-8 cursor-pointer hover:bg-[var(--accent)] hover:text-black transition-all duration-300 hover:rotate-180 mx-auto block">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -261,16 +275,220 @@
             </div>
             <div class="exchange-to flex flex-col gap-2.5 mb-4">
               <label for="to" class="text-sm font-semibold">To</label>
-              <select class="border bg-[var(--background)] py-1.5 px-2.5 rounded-lg border-[var(--border)] focus:border-2 focus:border-[var(--accent)] outline-none " name="to" id="transfer-to">
+              <select
+                class="border bg-[var(--background)] py-1.5 px-2.5 rounded-lg border-[var(--border)] focus:border-2 focus:border-[var(--accent)] outline-none"
+                name="to"
+                id="transfer-to">
                 <option value="eur">€ EUR - Euro</option>
               </select>
-              <button id="converCurrency" class="mt-2 border py-1.5 px-2.5 rounded-lg border-[var(--border)] focus:border-2 focus:border-[var(--accent)] outline-none ">Convert</button>
+              <button
+                id="converCurrency"
+                class="mt-2 border py-1.5 px-2.5 rounded-lg border-[var(--border)] focus:border-2 focus:border-[var(--accent)] outline-none">
+                Convert
+              </button>
             </div>
           </div>
         </div>
       </section>
       <!-- Gold Price Section -->
-
+      <section
+        class="bg-[hsla(217,21%,12%,1)] py-16 px-4 gold-price-container text-white">
+        <div
+          class="glance-text flex gap-2.5 items-center px-4 py-2 mx-auto rounded-full mb-6 w-fit text-[var(--accent)]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-sparkles w-4 h-4 text-accent">
+            <path
+              d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+            <path d="M20 3v4"></path>
+            <path d="M22 5h-4"></path>
+            <path d="M4 17v2"></path>
+            <path d="M5 18H3"></path>
+          </svg>
+          <span class="text-sm font-medium">Precious Metals </span>
+        </div>
+        <div class="mb-12 text-center">
+          <h2 class="mb-4 text-4xl font-bold">Live Gold Prices</h2>
+          <p class="text-[var(--muted-foreground)] w-80 mx-auto md:w-full">
+            Real-time gold prices for different purities
+          </p>
+        </div>
+        <div class="container mx-auto max-w-4xl">
+          <!-- Last Update of Prices -->
+          <div class="prices-update flex justify-between">
+            <p class="text-sm text-[var(--muted-foreground)]">
+              Last Update <span>10/27/2025, 12:46:19 AM</span>
+            </p>
+            <button
+              class="border flex items-center gap-1.5 border-[var(--border)] bg-[var(--backround)] py-1.5 px-2.5 rounded-lg hover:bg-[var(--accent)] transition-all hover:text-black cursor-pointer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-refresh-cw w-4 h-4 mr-2">
+                <path
+                  d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path>
+                <path d="M21 3v5h-5"></path>
+                <path
+                  d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path>
+                <path d="M8 16H3v5"></path>
+              </svg>
+              <span class="text-sm font-semibold">Refresh</span>
+            </button>
+          </div>
+          <div class="gold-cards mt-4 grid gap-6 md:grid-cols-3">
+            <!-- 24K Card -->
+            <div
+              class="gold-card border-[1px] p-4 hover:-translate-y-2 transition-all rounded-lg relative border-[#ffcc3333] bg-[var(--card)]">
+              <p class="gold-weight">24K</p>
+              <p class="text-sm text-[var(--muted-foreground)]">Pure Gold</p>
+              <!-- حركة السهم -->
+              <div class="icon absolute right-6 top-6">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trending-up w-5 h-5 text-green-500">
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                  <polyline points="16 7 22 7 22 13"></polyline>
+                </svg>
+              </div>
+              <!-- Per Ounce Container -->
+              <div
+                class="border p-2.5 rounded-xl my-4 bg-[#ffcc330d] border-[#ffcc331a]">
+                <p class="text-xs text-[var(--muted-foreground)] mb-1">
+                  Per Ounce
+                </p>
+                <p class="font-bold text-xl text-[var(--accent)]">$ 1967.45</p>
+              </div>
+              <!-- Per Gram Container -->
+              <div class="p-2.5 bg-[var(--muted)] rounded-lg my-4">
+                <p class="text-xs text-[var(--muted-foreground)] mb-1">
+                  Per Gram
+                </p>
+                <p class="font-bold text-xl">$ 63.26</p>
+              </div>
+              <p class="text-center text-green-500 font-bold text-sm">
+                +0.25% Today
+              </p>
+            </div>
+            <!-- 22K Card -->
+            <div
+              class="gold-card border-[1px] p-4 hover:-translate-y-2 transition-all rounded-lg relative border-[#ffcc3333] bg-[var(--card)]">
+              <p class="gold-weight">24K</p>
+              <p class="text-sm text-[var(--muted-foreground)]">Pure Gold</p>
+              <!-- حركة السهم -->
+              <div class="icon absolute right-6 top-6">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trending-up w-5 h-5 text-green-500">
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                  <polyline points="16 7 22 7 22 13"></polyline>
+                </svg>
+              </div>
+              <!-- Per Ounce Container -->
+              <div
+                class="border p-2.5 rounded-xl my-4 bg-[#ffcc330d] border-[#ffcc331a]">
+                <p class="text-xs text-[var(--muted-foreground)] mb-1">
+                  Per Ounce
+                </p>
+                <p class="font-bold text-xl text-[var(--accent)]">$ 1967.45</p>
+              </div>
+              <!-- Per Gram Container -->
+              <div class="p-2.5 bg-[var(--muted)] rounded-lg my-4">
+                <p class="text-xs text-[var(--muted-foreground)] mb-1">
+                  Per Gram
+                </p>
+                <p class="font-bold text-xl">$ 63.26</p>
+              </div>
+              <p class="text-center text-green-500 font-bold text-sm">
+                +0.25% Today
+              </p>
+            </div>
+            <!-- 18K Card -->
+            <div
+              class="gold-card border-[1px] p-4 hover:-translate-y-2 transition-all rounded-lg relative border-[#ffcc3333] bg-[var(--card)]">
+              <p class="gold-weight">24K</p>
+              <p class="text-sm text-[var(--muted-foreground)]">Pure Gold</p>
+              <!-- حركة السهم -->
+              <div class="icon absolute right-6 top-6">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trending-up w-5 h-5 text-green-500">
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                  <polyline points="16 7 22 7 22 13"></polyline>
+                </svg>
+              </div>
+              <!-- Per Ounce Container -->
+              <div
+                class="border p-2.5 rounded-xl my-4 bg-[#ffcc330d] border-[#ffcc331a]">
+                <p class="text-xs text-[var(--muted-foreground)] mb-1">
+                  Per Ounce
+                </p>
+                <p class="font-bold text-xl text-[var(--accent)]">$ 1967.45</p>
+              </div>
+              <!-- Per Gram Container -->
+              <div class="p-2.5 bg-[var(--muted)] rounded-lg my-4">
+                <p class="text-xs text-[var(--muted-foreground)] mb-1">
+                  Per Gram
+                </p>
+                <p class="font-bold text-xl">$ 63.26</p>
+              </div>
+              <p class="text-center text-green-500 font-bold text-sm">
+                +0.25% Today
+              </p>
+            </div>
+          </div>
+          <div class="gold-purities border-[1px] border-[#a6b7d91a] p-4 rounded-lg mt-8 bg-[#a6b7d90d]">
+            <h3 class="font-semibold mb-2">Understanding Gold Purities</h3>
+            <p class="text-sm mb-1 text-[var(--muted-foreground)]">
+              • <strong>24k:</strong> 99.9% pure gold - softest and most valuable
+            </p>
+            <p class="text-sm mb-1 text-[var(--muted-foreground)]">
+              • <strong>22k:</strong> 91.6% pure gold - commonly used in jewelry
+            </p>
+            <p class="text-sm mb-1 text-[var(--muted-foreground)]">
+              • <strong>18k:</strong> 75% pure gold - more durable for everyday wear
+            </p>
+          </div>
+        </div>
+      </section>
       <!-- About us Section -->
 
       <!-- Footer -->
