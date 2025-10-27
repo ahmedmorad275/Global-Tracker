@@ -297,10 +297,10 @@ async function conversionResult() {
       const result = await request.json();
       document.querySelector('.result-container').classList.remove('hidden');
       document.getElementById('resultText').textContent =
-        result.conversion_result;
+        result.conversion_result + transferTo.value;
       document.getElementById(
         'detailedResult'
-      ).textContent = `${amountInput.value} ${transferFrom.value} = ${result.conversion_rate} ${transferTo.value}`;
+      ).textContent = `1 ${transferFrom.value} = ${result.conversion_rate} ${transferTo.value}`;
     }
   } catch (err) {
     console.log(`Error: ${err.message}`);
