@@ -13,3 +13,7 @@ menuBtnArray.forEach((ele) => {
     ele.classList.add("active");
   });
 });
+const themeBtnChanger = document.getElementById("themeBtnChanger");
+themeBtnChanger.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
