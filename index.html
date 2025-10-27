@@ -11,8 +11,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
       integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+      referrerpolicy="no-referrer" />
     <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- External CSS Style -->
@@ -23,8 +22,7 @@
     <nav class="sticky top-0 z-50 p-2.5 border-b">
       <!-- Navbar Content -->
       <div
-        class="mobile-show flex items-center justify-between container mx-auto"
-      >
+        class="mobile-show flex items-center justify-between container mx-auto">
         <!-- Nav Left Part -->
         <div class="nav-left flex gap-2.5 items-center font-bold">
           <!-- Logo -->
@@ -41,26 +39,22 @@
           <div class="mt-2 hidden md:flex gap-1 text-sm font-medium">
             <button
               onclick="location.href='#home'"
-              class="cursor-pointer active block rounded-xl transition-all hover:opacity-90 text-(--secondary-foreground) hover:text-black px-3.5 py-2 w-fit text-left"
-            >
+              class="cursor-pointer active block rounded-xl transition-all hover:opacity-90 text-(--secondary-foreground) hover:text-black px-3.5 py-2 w-fit text-left">
               Home
             </button>
             <button
               onclick="location.href='#currency'"
-              class="cursor-pointer block rounded-xl transition-colors hover:bg-(--accent) text-(--secondary-foreground) hover:text-black px-3.5 py-2 w-fit text-left"
-            >
+              class="cursor-pointer block rounded-xl transition-colors hover:bg-(--accent) text-(--secondary-foreground) hover:text-black px-3.5 py-2 w-fit text-left">
               Currency Converter
             </button>
             <button
               onclick="location.href='#gold'"
-              class="cursor-pointer block rounded-xl transition-colors hover:bg-(--accent) text-(--secondary-foreground) hover:text-black px-3.5 py-2 w-fit text-left"
-            >
+              class="cursor-pointer block rounded-xl transition-colors hover:bg-(--accent) text-(--secondary-foreground) hover:text-black px-3.5 py-2 w-fit text-left">
               Gold Price
             </button>
             <button
               onclick="location.href='#about'"
-              class="cursor-pointer block rounded-xl transition-colors hover:bg-(--accent) text-(--secondary-foreground) hover:text-black px-3.5 py-2 w-fit text-left"
-            >
+              class="cursor-pointer block rounded-xl transition-colors hover:bg-(--accent) text-(--secondary-foreground) hover:text-black px-3.5 py-2 w-fit text-left">
               About
             </button>
           </div>
@@ -70,8 +64,7 @@
           <!-- Theme Button -->
           <div
             id="themeBtnChanger"
-            class="toggle-theme bg-[var(--background)] p-1.5 border-2 border-[var(--border)] text-[var(--secondary-foreground)] rounded-xl cursor-pointer hover:bg-[var(--accent)] hover:scale-110 hover:text-[var(--accent-foreground)] transition-all"
-          >
+            class="toggle-theme bg-(--background) p-1.5 border-2 border-(--border) text-(--secondary-foreground) rounded-xl cursor-pointer hover:bg-(--accent) hover:scale-110 hover:text-(--accent-foreground) transition-all">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -82,8 +75,7 @@
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-sun h-5 w-5"
-            >
+              class="lucide lucide-sun h-5 w-5">
               <circle cx="12" cy="12" r="4"></circle>
               <path d="M12 2v2"></path>
               <path d="M12 20v2"></path>
@@ -98,8 +90,7 @@
           <!-- Menu Show Button -->
           <div
             id="menuShowBtn"
-            class="md:hidden menu-buttons bg-[var(--background)] p-1.5 border-2 border-[var(--border)] text-[var(--secondary-foreground)] rounded-xl cursor-pointer"
-          >
+            class="md:hidden menu-buttons bg-(--background) p-1.5 border-2 border-(--border) text-(--secondary-foreground) rounded-xl cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -110,8 +101,7 @@
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-menu h-5 w-5"
-            >
+              class="lucide lucide-menu h-5 w-5">
               <line x1="4" x2="20" y1="12" y2="12"></line>
               <line x1="4" x2="20" y1="6" y2="6"></line>
               <line x1="4" x2="20" y1="18" y2="18"></line>
@@ -122,30 +112,25 @@
       <!-- Mobile Menu Buttons -->
       <div
         id="menuOnMobile"
-        class="menu-on-mobile container mx-auto mt-4 hidden md:hidden"
-      >
+        class="menu-on-mobile container mx-auto mt-4 hidden md:hidden">
         <button
           onclick="location.href='#home'"
-          class="active block rounded-xl hover:text-black text-white p-2 w-full text-left"
-        >
+          class="active block rounded-xl hover:text-black text-(--secondary-foreground) hover:bg-(--accent) p-2 w-full text-left">
           Home
         </button>
         <button
           onclick="location.href='#currency'"
-          class="block rounded-xl hover:text-black text-white p-2 w-full text-left"
-        >
+          class="block rounded-xl hover:text-black text-(--secondary-foreground) hover:bg-(--accent) p-2 w-full text-left">
           Currency Converter
         </button>
         <button
           onclick="location.href='#gold'"
-          class="block rounded-xl hover:text-black text-white p-2 w-full text-left"
-        >
+          class="block rounded-xl hover:text-black text-(--secondary-foreground) hover:bg-(--accent) p-2 w-full text-left">
           Gold Price
         </button>
         <button
           onclick="location.href='#about'"
-          class="block rounded-xl hover:text-black text-white p-2 w-full text-left"
-        >
+          class="block rounded-xl hover:text-black text-(--secondary-foreground) hover:bg-(--accent) p-2 w-full text-left">
           About
         </button>
       </div>
@@ -155,12 +140,10 @@
       <!-- Hero Section -->
       <section
         id="home"
-        class="hero-section relative py-20 px-4 overflow-hidden"
-      >
+        class="hero-section relative py-20 px-4 overflow-hidden">
         <div class="absolute inset-0 bg-gradient opacity-5"></div>
         <div
-          class="glance-text flex gap-2.5 items-center px-4 py-2 mx-auto rounded-full mb-6 w-fit text-[var(--accent)]"
-        >
+          class="glance-text flex gap-2.5 items-center px-4 py-2 mx-auto rounded-full mb-6 w-fit text-(--accent)">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -171,30 +154,25 @@
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="lucide lucide-trending-up w-4 h-4 text-accent"
-          >
+            class="lucide lucide-trending-up w-4 h-4 text-accent">
             <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
             <polyline points="16 7 22 7 22 13"></polyline>
           </svg>
           <span class="text-sm font-medium">Live Market Data</span>
         </div>
         <h1
-          class="main-title-text text-center text-5xl mb-6 mx-auto w-fit md:text-6xl font-bold text-(--secondary-foreground) leading-tight"
-        >
+          class="main-title-text text-center text-5xl mb-6 mx-auto w-fit md:text-6xl font-bold text-(--secondary-foreground) leading-tight">
           Global Gold & <span class="inline-block">Currency Tracker</span>
         </h1>
         <p
-          class="text-xl text-center text-[var(--muted-foreground)] mb-8 max-w-2xl mx-auto"
-        >
+          class="text-xl text-center text-(--muted-foreground) mb-8 max-w-2xl mx-auto">
           Real-time currency conversion and live gold prices from markets
           worldwide. Track precious metals and exchange rates with precision.
         </p>
         <div
-          class="heaser-stats flex flex-col items-center gap-2.5 md:flex-row justify-center"
-        >
+          class="heaser-stats flex flex-col items-center gap-2.5 md:flex-row justify-center">
           <div
-            class="box border-[var(--border)] border-2 w-fit px-6 py-3 rounded-lg bg-[var(--card)] flex items-center gap-2.5 text-[var(--accent)]"
-          >
+            class="box border-(--border) border-2 w-fit px-6 py-3 rounded-lg bg-(--card) flex items-center gap-2.5 text-(--accent)">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -205,25 +183,21 @@
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-coins w-5 h-5 text-accent"
-            >
+              class="lucide lucide-coins w-5 h-5 text-accent">
               <circle cx="8" cy="8" r="6"></circle>
               <path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path>
               <path d="M7 6h1v4"></path>
               <path d="m16.71 13.88.7.71-2.82 2.82"></path>
             </svg>
             <div class="text">
-              <p class="text-xs text-[var(--muted-foreground)]">
-                150+ Currencies
-              </p>
+              <p class="text-xs text-(--muted-foreground)">150+ Currencies</p>
               <p class="font-semibold text-(--secondary-foreground) text-sm">
                 Live Exchange Rates
               </p>
             </div>
           </div>
           <div
-            class="box border-[var(--border)] border-2 w-fit px-6 py-3 rounded-lg bg-[var(--card)] flex items-center gap-2.5 text-[var(--accent)]"
-          >
+            class="box border-(--border) border-2 w-fit px-6 py-3 rounded-lg bg-(--card) flex items-center gap-2.5 text-(--accent)">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -234,17 +208,14 @@
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-coins w-5 h-5 text-accent"
-            >
+              class="lucide lucide-coins w-5 h-5 text-accent">
               <circle cx="8" cy="8" r="6"></circle>
               <path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path>
               <path d="M7 6h1v4"></path>
               <path d="m16.71 13.88.7.71-2.82 2.82"></path>
             </svg>
             <div class="text">
-              <p class="text-xs text-[var(--muted-foreground)]">
-                24k, 22k, 18k
-              </p>
+              <p class="text-xs text-(--muted-foreground)">24k, 22k, 18k</p>
               <p class="font-semibold text-(--secondary-foreground) text-sm">
                 Real-time Gold Prices
               </p>
@@ -255,47 +226,42 @@
       <!-- Currency Exchange Section -->
       <section
         id="currency"
-        class="py-16 px-4 currency-exchange-container container mx-auto max-w-4xl text-(--secondary-foreground)"
-      >
+        class="py-16 px-4 currency-exchange-container container mx-auto max-w-4xl text-(--secondary-foreground)">
         <div class="mb-12 text-center">
           <h2 class="mb-4 text-4xl font-bold">Currency Converter</h2>
-          <p class="text-[var(--muted-foreground)] w-80 mx-auto md:w-full">
+          <p class="text-(--muted-foreground) w-80 mx-auto md:w-full">
             Convert between 150+ world currencies with real-time exchange rates
           </p>
         </div>
         <div
-          class="currency-exchange-container container mx-auto bg-[var(--card)] text-[var(--card-foreground)] py-6 px-6 border border-[var(--border)] rounded-lg"
-        >
+          class="currency-exchange-container container mx-auto bg-(--card) text-(--card-foreground) py-6 px-6 border border-(--border) rounded-lg">
           <h3 class="font-bold">Live Currency Exchange</h3>
-          <p class="text-sm text-[var(--muted-foreground)] mb-6">
-            Last updated: 10/26/2025, 9:41:19 PM
+          <p class="text-sm text-(--muted-foreground) mb-6">
+            Last updated:
+            <span id="timeAndDateTextCurrency">10/26/2025, 9:41:19 PM</span>
           </p>
           <div class="exchange-details">
             <div class="exchange-amount flex flex-col gap-2.5 mb-4">
               <label for="amount" class="text-sm font-semibold">Amount</label>
               <input
-                class="border bg-[var(--background)] py-1.5 px-2.5 rounded-lg border-[var(--border)] focus:border-2 focus:border-[var(--accent)] outline-none"
+                class="border bg-(--background) py-1.5 px-2.5 rounded-lg border-(--border) focus:border-2 focus:border-(--accent) outline-none"
                 type="number"
                 name="amount"
                 id="amount"
                 placeholder="Enter amount"
-                value="1"
-              />
+                value="1" />
             </div>
             <div class="exchange-from flex flex-col gap-2.5 mb-4">
               <label for="from" class="text-sm font-semibold">From</label>
               <select
-                class="border bg-[var(--background)] py-1.5 px-2.5 rounded-lg border-[var(--border)] focus:border-2 focus:border-[var(--accent)] outline-none"
+                class="border bg-(--background) py-1.5 px-2.5 rounded-lg border-(--border) focus:border-2 focus:border-(--accent) outline-none"
                 name="from"
-                id="transfer-from"
-              >
-                <option value="usd">$ USD - US Dollar</option>
-              </select>
+                id="transfer-from"></select>
             </div>
             <div class="exchange-button">
               <button
-                class="bg-[var(--background)] rounded-full p-2.5 mt-8 cursor-pointer hover:bg-[var(--accent)] hover:text-black transition-all duration-300 hover:rotate-180 mx-auto block"
-              >
+                id="transfer-btn"
+                class="bg-(--background) rounded-full p-2.5 mt-8 cursor-pointer hover:bg-(--accent) hover:text-black transition-all duration-300 hover:rotate-180 mx-auto block">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -306,8 +272,7 @@
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-arrow-right-left w-5 h-5"
-                >
+                  class="lucide lucide-arrow-right-left w-5 h-5">
                   <path d="m16 3 4 4-4 4"></path>
                   <path d="M20 7H4"></path>
                   <path d="m8 21-4-4 4-4"></path>
@@ -318,18 +283,22 @@
             <div class="exchange-to flex flex-col gap-2.5 mb-4">
               <label for="to" class="text-sm font-semibold">To</label>
               <select
-                class="border bg-[var(--background)] py-1.5 px-2.5 rounded-lg border-[var(--border)] focus:border-2 focus:border-[var(--accent)] outline-none"
+                class="border bg-(--background) py-1.5 px-2.5 rounded-lg border-(--border) focus:border-2 focus:border-(--accent)] outline-none"
                 name="to"
-                id="transfer-to"
-              >
-                <option value="eur">€ EUR - Euro</option>
-              </select>
+                id="transfer-to"></select>
               <button
                 id="converCurrency"
-                class="mt-2 border py-1.5 px-2.5 rounded-lg border-[var(--border)] focus:border-2 focus:border-[var(--accent)] outline-none"
-              >
+                class="mt-2 border py-1.5 px-2.5 rounded-lg border-(--border) focus:border-2 focus:border-(--accent) outline-none">
                 Convert
               </button>
+              <div 
+                class="result-container border-2 hidden mt-2 transition-all bg-(--accent)/1 border-(--accent)/20 p-6 rounded-lg text-center">
+                <p class="mb-2 text-(--muted-foreground) text-sm">Result</p>
+                <h2 id="resultText" class="font-bold text-3xl text-(--accent)">0.86 EUR</h2>
+                <p id="detailedResult" class="mt-2 text-(--muted-foreground) text-md">
+                  1 USD = 0.86 EUR
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -337,12 +306,10 @@
       <!-- Gold Price Section -->
       <section
         id="gold"
-        class="relative py-16 px-4 gold-price-container text-(--secondary-foreground)"
-      >
+        class="relative py-16 px-4 gold-price-container text-(--secondary-foreground)">
         <div class="absolute inset-0 bg-gradient opacity-5"></div>
         <div
-          class="glance-text flex gap-2.5 items-center px-4 py-2 mx-auto rounded-full mb-6 w-fit text-[var(--accent)]"
-        >
+          class="glance-text flex gap-2.5 items-center px-4 py-2 mx-auto rounded-full mb-6 w-fit text-(--accent)">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -353,11 +320,9 @@
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="lucide lucide-sparkles w-4 h-4 text-accent"
-          >
+            class="lucide lucide-sparkles w-4 h-4 text-accent">
             <path
-              d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"
-            ></path>
+              d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
             <path d="M20 3v4"></path>
             <path d="M22 5h-4"></path>
             <path d="M4 17v2"></path>
@@ -367,19 +332,19 @@
         </div>
         <div class="mb-12 text-center">
           <h2 class="mb-4 text-4xl font-bold">Live Gold Prices</h2>
-          <p class="text-[var(--muted-foreground)] w-80 mx-auto md:w-full">
+          <p class="text-(--muted-foreground) w-80 mx-auto md:w-full">
             Real-time gold prices for different purities
           </p>
         </div>
         <div class="container mx-auto max-w-4xl">
           <!-- Last Update of Prices -->
-          <div class="prices-update flex justify-between">
-            <p class="text-sm text-[var(--muted-foreground)]">
-              Last Update <span>10/27/2025, 12:46:19 AM</span>
+          <div class="prices-update flex justify-between items-center">
+            <p class="text-sm text-(--muted-foreground)">
+              Last Update <span id="timeAndDateText"></span>
             </p>
             <button
-              class="border flex items-center gap-1.5 bg-[var(--background)] py-1.5 px-2.5 rounded-lg hover:bg-[var(--accent)] transition-all hover:text-black cursor-pointer"
-            >
+              id="refresh-data"
+              class="border flex z-50 items-center gap-1.5 bg-(--background) py-1.5 px-2.5 rounded-lg hover:bg-(--accent) transition-all hover:text-black cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -390,15 +355,12 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="lucide lucide-refresh-cw w-4 h-4 mr-2"
-              >
+                class="lucide lucide-refresh-cw w-4 h-4 mr-2">
                 <path
-                  d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"
-                ></path>
+                  d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path>
                 <path d="M21 3v5h-5"></path>
                 <path
-                  d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"
-                ></path>
+                  d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path>
                 <path d="M8 16H3v5"></path>
               </svg>
               <span class="text-sm font-semibold">Refresh</span>
@@ -407,10 +369,9 @@
           <div class="gold-cards mt-4 grid gap-6 md:grid-cols-3">
             <!-- 24K Card -->
             <div
-              class="gold-card border-[1px] p-4 hover:-translate-y-2 transition-all rounded-lg relative border-[var(--accent)]/20 bg-[var(--card)]"
-            >
+              class="gold-card border p-4 hover:-translate-y-2 transition-all rounded-lg relative border-(--accent)/20 bg-(--card)">
               <p class="gold-weight">24K</p>
-              <p class="text-sm text-[var(--muted-foreground)]">Pure Gold</p>
+              <p class="text-sm text-(--muted-foreground)">Pure Gold</p>
               <!-- حركة السهم -->
               <div class="icon absolute right-6 top-6">
                 <svg
@@ -423,26 +384,20 @@
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-trending-up w-5 h-5 text-green-500"
-                >
+                  class="lucide lucide-trending-up w-5 h-5 text-green-500">
                   <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
                   <polyline points="16 7 22 7 22 13"></polyline>
                 </svg>
               </div>
               <!-- Per Ounce Container -->
               <div
-                class="border p-2.5 rounded-xl my-4 bg-[var(--accent)]/5 border-[var(--accent)]/10"
-              >
-                <p class="text-xs text-[var(--muted-foreground)] mb-1">
-                  Per Ounce
-                </p>
-                <p class="font-bold text-xl text-[var(--accent)]">$ 1967.45</p>
+                class="border p-2.5 rounded-xl my-4 bg-(--accent)/5 border-(--accent)/10">
+                <p class="text-xs text-(--muted-foreground) mb-1">Per Ounce</p>
+                <p class="font-bold text-xl text-(--accent)">$ 1967.45</p>
               </div>
               <!-- Per Gram Container -->
-              <div class="p-2.5 bg-[var(--muted)] rounded-lg my-4">
-                <p class="text-xs text-[var(--muted-foreground)] mb-1">
-                  Per Gram
-                </p>
+              <div class="p-2.5 bg-(--muted) rounded-lg my-4">
+                <p class="text-xs text-(--muted-foreground) mb-1">Per Gram</p>
                 <p class="font-bold text-xl">$ 63.26</p>
               </div>
               <p class="text-center text-green-500 font-bold text-sm">
@@ -451,10 +406,9 @@
             </div>
             <!-- 22K Card -->
             <div
-              class="gold-card border-[1px] p-4 hover:-translate-y-2 transition-all rounded-lg relative border-[var(--accent)]/20 bg-[var(--card)]"
-            >
+              class="gold-card border p-4 hover:-translate-y-2 transition-all rounded-lg relative border-[(--accent)/20 bg-(--card)">
               <p class="gold-weight">24K</p>
-              <p class="text-sm text-[var(--muted-foreground)]">Pure Gold</p>
+              <p class="text-sm text-(--muted-foreground)">Pure Gold</p>
               <!-- حركة السهم -->
               <div class="icon absolute right-6 top-6">
                 <svg
@@ -467,26 +421,20 @@
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-trending-up w-5 h-5 text-green-500"
-                >
+                  class="lucide lucide-trending-up w-5 h-5 text-green-500">
                   <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
                   <polyline points="16 7 22 7 22 13"></polyline>
                 </svg>
               </div>
               <!-- Per Ounce Container -->
               <div
-                class="border p-2.5 rounded-xl my-4 bg-[var(--accent)]/5 border-[var(--accent)]/10"
-              >
-                <p class="text-xs text-[var(--muted-foreground)] mb-1">
-                  Per Ounce
-                </p>
-                <p class="font-bold text-xl text-[var(--accent)]">$ 1967.45</p>
+                class="border p-2.5 rounded-xl my-4 bg-(--accent)/5 border-(--accent)/10">
+                <p class="text-xs text-(--muted-foreground) mb-1">Per Ounce</p>
+                <p class="font-bold text-xl text-(--accent)">$ 1967.45</p>
               </div>
               <!-- Per Gram Container -->
-              <div class="p-2.5 bg-[var(--muted)] rounded-lg my-4">
-                <p class="text-xs text-[var(--muted-foreground)] mb-1">
-                  Per Gram
-                </p>
+              <div class="p-2.5 bg-(--muted) rounded-lg my-4">
+                <p class="text-xs text-(--muted-foreground) mb-1">Per Gram</p>
                 <p class="font-bold text-xl">$ 63.26</p>
               </div>
               <p class="text-center text-green-500 font-bold text-sm">
@@ -495,10 +443,9 @@
             </div>
             <!-- 18K Card -->
             <div
-              class="gold-card border-[1px] p-4 hover:-translate-y-2 transition-all rounded-lg relative border-[var(--accent)]/20 bg-[var(--card)]"
-            >
+              class="gold-card border p-4 hover:-translate-y-2 transition-all rounded-lg relative border-(--accent)/20 bg-(--card)">
               <p class="gold-weight">24K</p>
-              <p class="text-sm text-[var(--muted-foreground)]">Pure Gold</p>
+              <p class="text-sm text-(--muted-foreground)">Pure Gold</p>
               <!-- حركة السهم -->
               <div class="icon absolute right-6 top-6">
                 <svg
@@ -511,26 +458,20 @@
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-trending-up w-5 h-5 text-green-500"
-                >
+                  class="lucide lucide-trending-up w-5 h-5 text-green-500">
                   <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
                   <polyline points="16 7 22 7 22 13"></polyline>
                 </svg>
               </div>
               <!-- Per Ounce Container -->
               <div
-                class="border p-2.5 rounded-xl my-4 bg-[var(--accent)]/5 border-[var(--accent)]/10"
-              >
-                <p class="text-xs text-[var(--muted-foreground)] mb-1">
-                  Per Ounce
-                </p>
-                <p class="font-bold text-xl text-[var(--accent)]">$ 1967.45</p>
+                class="border p-2.5 rounded-xl my-4 bg-(--accent)/5 border-(--accent)/10">
+                <p class="text-xs text-(--muted-foreground) mb-1">Per Ounce</p>
+                <p class="font-bold text-xl text-(--accent)">$ 1967.45</p>
               </div>
               <!-- Per Gram Container -->
-              <div class="p-2.5 bg-[var(--muted)] rounded-lg my-4">
-                <p class="text-xs text-[var(--muted-foreground)] mb-1">
-                  Per Gram
-                </p>
+              <div class="p-2.5 bg-(--muted) rounded-lg my-4">
+                <p class="text-xs text-(--muted-foreground) mb-1">Per Gram</p>
                 <p class="font-bold text-xl">$ 63.26</p>
               </div>
               <p class="text-center text-green-500 font-bold text-sm">
@@ -539,17 +480,16 @@
             </div>
           </div>
           <div
-            class="gold-purities border text-[var(--card-foreground)] p-4 rounded-lg mt-8 bg-[var(--primary)]/5"
-          >
+            class="gold-purities border text-(--card-foreground) p-4 rounded-lg mt-8 bg-(--primary)/5">
             <h3 class="font-semibold mb-2">Understanding Gold Purities</h3>
-            <p class="text-sm mb-1 text-[var(--muted-foreground)]">
+            <p class="text-sm mb-1 text-(--muted-foreground)">
               • <strong>24k:</strong> 99.9% pure gold - softest and most
               valuable
             </p>
-            <p class="text-sm mb-1 text-[var(--muted-foreground)]">
+            <p class="text-sm mb-1 text-(--muted-foreground)">
               • <strong>22k:</strong> 91.6% pure gold - commonly used in jewelry
             </p>
-            <p class="text-sm mb-1 text-[var(--muted-foreground)]">
+            <p class="text-sm mb-1 text-(--muted-foreground)">
               • <strong>18k:</strong> 75% pure gold - more durable for everyday
               wear
             </p>
@@ -559,20 +499,18 @@
       <!-- About us Section -->
       <section
         id="about"
-        class="py-16 px-4 about-container mx-auto max-w-4xl text-(--secondary-foreground)"
-      >
+        class="py-16 px-4 about-container mx-auto max-w-4xl text-(--secondary-foreground)">
         <div class="mb-12 text-center">
           <h2 class="mb-4 text-4xl font-bold">About Our Platform</h2>
-          <p class="text-[var(--muted-foreground)] w-80 mx-auto md:w-full">
+          <p class="text-(--muted-foreground) w-80 mx-auto md:w-full">
             Your trusted source for real-time currency exchange rates and
             precious metal prices
           </p>
         </div>
         <div class="about-cards grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           <div
-            class="about-card p-4 rounded-lg flex flex-col items-center border text-[var(--card-foreground)] bg-[var(--card)]"
-          >
-            <div class="p-2 rounded-lg mb-2 text-[var(--accent)]">
+            class="about-card p-4 rounded-lg flex flex-col items-center border text-(--card-foreground) bg-(--card)">
+            <div class="p-2 rounded-lg mb-2 text-(--accent)">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -583,24 +521,21 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="lucide lucide-globe w-6 h-6"
-              >
+                class="lucide lucide-globe w-6 h-6">
                 <circle cx="12" cy="12" r="10"></circle>
                 <path
-                  d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"
-                ></path>
+                  d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
                 <path d="M2 12h20"></path>
               </svg>
             </div>
             <h4 class="font-semibold mb-2">Global Coverage</h4>
-            <p class="text-center text-xs mb-1 text-[var(--muted-foreground)]">
+            <p class="text-center text-xs mb-1 text-(--muted-foreground)">
               Track 150+ currencies and gold prices from markets worldwide
             </p>
           </div>
           <div
-            class="about-card p-4 rounded-lg flex flex-col items-center border text-[var(--card-foreground)] bg-[var(--card)]"
-          >
-            <div class="p-2 rounded-lg mb-2 text-[var(--accent)]">
+            class="about-card p-4 rounded-lg flex flex-col items-center border text-(--card-foreground) bg-(--card)">
+            <div class="p-2 rounded-lg mb-2 text-(--accent)">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -611,23 +546,20 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="lucide lucide-zap w-6 h-6 text-accent"
-              >
+                class="lucide lucide-zap w-6 h-6 text-accent">
                 <path
-                  d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"
-                ></path>
+                  d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
               </svg>
             </div>
             <h4 class="font-semibold mb-2">Real-Time Data</h4>
-            <p class="text-center text-xs mb-1 text-[var(--muted-foreground)]">
+            <p class="text-center text-xs mb-1 text-(--muted-foreground)">
               Live exchange rates and precious metal prices updated every 5
               minutes
             </p>
           </div>
           <div
-            class="about-card p-4 rounded-lg flex flex-col items-center border text-[var(--card-foreground)] bg-[var(--card)]"
-          >
-            <div class="p-2 rounded-lg mb-2 text-[var(--accent)]">
+            class="about-card p-4 rounded-lg flex flex-col items-center border text-(--card-foreground) bg-(--card)">
+            <div class="p-2 rounded-lg mb-2 text-(--accent)">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -638,22 +570,19 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="lucide lucide-shield w-6 h-6 text-accent"
-              >
+                class="lucide lucide-shield w-6 h-6 text-accent">
                 <path
-                  d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
-                ></path>
+                  d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
               </svg>
             </div>
             <h4 class="font-semibold mb-2">Reliable Sources</h4>
-            <p class="text-center text-xs mb-1 text-[var(--muted-foreground)]">
+            <p class="text-center text-xs mb-1 text-(--muted-foreground)">
               Data from trusted financial APIs and verified market sources
             </p>
           </div>
           <div
-            class="about-card p-4 rounded-lg flex flex-col items-center border text-[var(--card-foreground)] bg-[var(--card)]"
-          >
-            <div class="p-2 rounded-lg mb-2 text-[var(--accent)]">
+            class="about-card p-4 rounded-lg flex flex-col items-center border text-(--card-foreground) bg-(--card)">
+            <div class="p-2 rounded-lg mb-2 text-(--accent)">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -664,29 +593,26 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="lucide lucide-shield w-6 h-6 text-accent"
-              >
+                class="lucide lucide-shield w-6 h-6 text-accent">
                 <path
-                  d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
-                ></path>
+                  d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
               </svg>
             </div>
             <h4 class="font-semibold mb-2">Market Insights</h4>
-            <p class="text-center text-xs mb-1 text-[var(--muted-foreground)]">
+            <p class="text-center text-xs mb-1 text-(--muted-foreground)">
               Track daily changes and market trends for informed decisions
             </p>
           </div>
         </div>
         <div
-          class="how-it-works-container bg-gradient-to-br from-[var(--primary)]/5 to-[var(--accent)]/5 border-[var(--primary)]/1 border gap-3.5 p-4 mt-6 rounded-lg"
-        >
+          class="how-it-works-container bg-linear-to-br from-(--primary)/5 to-(--accent)/5 border-(--primary)/1 border gap-3.5 p-4 mt-6 rounded-lg">
           <h3 class="font-bold mb-3 text-center text-xl">How it Works</h3>
           <div class="flex flex-col gap-5 md:flex-row">
             <div class="currency-conversion">
-              <h4 class="text-[var(--accent)] text-sm font-semibold mb-1">
+              <h4 class="text-(--accent) text-sm font-semibold mb-1">
                 Currency Conversion
               </h4>
-              <p class="text-xs text-[var(--muted-foreground)] pl-1">
+              <p class="text-xs text-(--muted-foreground) pl-1">
                 We use the ExchangeRate-API to fetch real-time exchange rates
                 for 150+ currencies. The data is updated every 5 minutes to
                 ensure accuracy. Simply select your currencies, enter an amount,
@@ -694,10 +620,10 @@
               </p>
             </div>
             <div class="Gold-Pricing">
-              <h4 class="text-[var(--accent)] text-sm font-semibold mb-1">
+              <h4 class="text-(--accent) text-sm font-semibold mb-1">
                 Gold Price Tracking
               </h4>
-              <p class="text-xs text-[var(--muted-foreground)] pl-1">
+              <p class="text-xs text-(--muted-foreground) pl-1">
                 Our platform monitors gold prices for 24k, 22k, and 18k purity
                 levels. Prices are displayed per gram and per ounce, with daily
                 change percentages. Data refreshes automatically every 5 minutes
@@ -710,8 +636,7 @@
       <!-- Footer -->
       <section class="bg-(--card) py-10 px-4 text-(--secondary-foreground)">
         <div
-          class="summary-container container mx-auto max-w-4xl px-3 md:flex gap-20 justify-between"
-        >
+          class="summary-container container mx-auto max-w-4xl px-3 md:flex gap-20 justify-between">
           <div class="nav-left flex flex-col gap-2 md:w-1/3">
             <div class="flex gap-2 items-center">
               <!-- Logo -->
@@ -723,27 +648,24 @@
                 <span class="text-sm">Global Tracker</span>
               </div>
             </div>
-            <p class="text-xs text-[var(--muted-foreground)]">
+            <p class="text-xs text-(--muted-foreground)">
               Your trusted source for real-time currency and gold price tracking
             </p>
           </div>
           <div class="mt-4 flex-1 md:mt-0">
             <h3 class="font-semibold">Quick Links</h3>
             <div
-              class="links text-xs flex flex-col gap-2 mt-3 text-[var(--muted-foreground)]"
-            >
-              <a class="hover:text-[var(--accent)] transition-all" href="#home"
+              class="links text-xs flex flex-col gap-2 mt-3 text-(--muted-foreground)">
+              <a class="hover:text-(--accent) transition-all" href="#home"
                 >Home</a
               >
-              <a
-                class="hover:text-[var(--accent)] transition-all"
-                href="#currency"
+              <a class="hover:text-(--accent) transition-all" href="#currency"
                 >Currency Converter</a
               >
-              <a class="hover:text-[var(--accent)] transition-all" href="#gold"
+              <a class="hover:text-(--accent) transition-all" href="#gold"
                 >Gold Prices</a
               >
-              <a class="hover:text-[var(--accent)] transition-all" href="#about"
+              <a class="hover:text-(--accent) transition-all" href="#about"
                 >About</a
               >
             </div>
@@ -751,17 +673,17 @@
           <div class="mt-4 flex-2 md:mt-0">
             <h3 class="font-semibold">Contact With Us</h3>
             <div
-              class="links text-xs flex gap-2 mt-3 text-[var(--muted-foreground)]"
-            >
+              class="links text-xs flex gap-2 mt-3 text-(--muted-foreground)">
               <a
+                target="_blank"
                 href="https://wa.me/201017168338"
-                class="w-10 h-10 rounded-lg bg-[var(--muted)] hover:bg-[var(--accent)] hover:text-[var(--accent-foreground)] flex items-center justify-center transition-all hover:scale-110"
-              >
+                class="w-10 h-10 rounded-lg bg-(--muted) hover:bg-(--accent) hover:text-(--accent-foreground) flex items-center justify-center transition-all hover:scale-110">
                 <i class="fa-brands fa-whatsapp text-2xl"></i
               ></a>
               <a
+                target="_blank"
                 href="https://github.com/ahmedmorad275"
-                class="w-10 h-10 rounded-lg bg-[var(--muted)] hover:bg-[var(--accent)] hover:text-[var(--accent-foreground)] flex items-center justify-center transition-all hover:scale-110"
+                class="w-10 h-10 rounded-lg bg-(--muted) hover:bg-(--accent) hover:text-(--accent-foreground) flex items-center justify-center transition-all hover:scale-110"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -772,17 +694,15 @@
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-github w-5 h-5"
-                >
+                  class="lucide lucide-github w-5 h-5">
                   <path
-                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
-                  ></path>
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
                   <path d="M9 18c-4.51 2-5-2-7-2"></path></svg
               ></a>
               <a
+                target="_blank"
                 href="https://www.linkedin.com/in/ahmedmorad27"
-                class="w-10 h-10 rounded-lg bg-[var(--muted)] hover:bg-[var(--accent)] hover:text-[var(--accent-foreground)] flex items-center justify-center transition-all hover:scale-110"
-              >
+                class="w-10 h-10 rounded-lg bg-(--muted) hover:bg-(--accent) hover:text-(--accent-foreground) flex items-center justify-center transition-all hover:scale-110">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -793,18 +713,17 @@
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-linkedin w-5 h-5"
-                >
+                  class="lucide lucide-linkedin w-5 h-5">
                   <path
-                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-                  ></path>
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                   <rect width="4" height="12" x="2" y="9"></rect>
                   <circle cx="4" cy="4" r="2"></circle>
                 </svg>
               </a>
               <a
+                target="_blank"
                 href="mailto:ahmedmorad569@gmail.com"
-                class="w-10 h-10 rounded-lg bg-[var(--muted)] hover:bg-[var(--accent)] hover:text-[var(--accent-foreground)] flex items-center justify-center transition-all hover:scale-110"
+                class="w-10 h-10 rounded-lg bg-(--muted) hover:b-(--accent) hover:text-(--accent-foreground) flex items-center justify-center transition-all hover:scale-110"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -815,22 +734,19 @@
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-mail w-5 h-5"
-                >
+                  class="lucide lucide-mail w-5 h-5">
                   <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                   <path
-                    d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
-                  ></path></svg
+                    d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg
               ></a>
             </div>
           </div>
         </div>
         <!-- Rights -->
       </section>
-      <footer class="bg-(--card) pb-10 px-4">
+      <footer class="bg-(--card) pb-2 px-4">
         <div
-          class="container max-w-4xl mx-auto pt-3 text-center text-xs border-t border-[var(--border)] text-[var(--muted-foreground)]"
-        >
+          class="container max-w-4xl mx-auto pt-3 text-center text-xs border-t border-(--border) text-(--muted-foreground)">
           © 2025 Global Gold & Currency Tracker. All rights reserved.
         </div>
       </footer>
