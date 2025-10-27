@@ -8,6 +8,7 @@ const bodyClasses = localStorage.getItem('theme');
 const themeBtnChanger = document.getElementById('themeBtnChanger');
 const refreshDataBtn = document.getElementById('refresh-data');
 const amountInput = document.getElementById('amount');
+const currencySelection = document.getElementById('currencySelection');
 
 // Show menu on Mobile
 menuShowBtn.addEventListener('click', () => {
@@ -108,7 +109,10 @@ function updateTime() {
   ).textContent = `${fullDate}, ${fullTime}`;
 }
 updateTime();
-refreshDataBtn.addEventListener('click', updateTime);
+refreshDataBtn.addEventListener('click', () => {
+  updateTime();
+  getGoldPrice();
+});
 
 // Currency With Country Array
 const currency_list = [
@@ -281,6 +285,7 @@ const currency_list = [
 currency_list.forEach((cur) => {
   transferFrom.innerHTML += `<option value="${cur.key}">${cur.key} - ${cur.name}</option>`;
   transferTo.innerHTML += `<option value="${cur.key}">${cur.key} - ${cur.name}</option>`;
+  currencySelection.innerHTML += `<option value="${cur.key}">${cur.key} - ${cur.name}</option>`;
 });
 
 // Converse Currencies
@@ -296,8 +301,10 @@ async function conversionResult() {
     } else {
       const result = await request.json();
       document.querySelector('.result-container').classList.remove('hidden');
-      document.getElementById('resultText').textContent =
-        result.conversion_result + transferTo.value;
+      document.getElementById(
+        'resultText'
+      ).textContent = `${result.conversion_result} ${transferTo.value}`;
+
       document.getElementById(
         'detailedResult'
       ).textContent = `1 ${transferFrom.value} = ${result.conversion_rate} ${transferTo.value}`;
@@ -321,22 +328,195 @@ transferBtn.addEventListener(
 );
 
 // Gold Price
-// const myHeaders = new Headers();
-// myHeaders.append(
-//   'x-api-key',
-//   'sk_2028eE78175BB201313Bb59309876AaEF3350febE22FC0f5'
-// );
+const goldCards = document.querySelector('.gold-cards');
+async function getGoldPrice() {
+  goldCards.innerHTML = '';
+  const myHeaders = new Headers();
+  myHeaders.append(
+    'x-api-key',
+    'sk_2028eE78175BB201313Bb59309876AaEF3350febE22FC0f5'
+  );
+  const requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow',
+  };
+  try {
+    const request = await fetch(
+      `https://gold.g.apised.com/v1/latest?metals=XAU&base_currency=${currencySelection.value}&weight_unit=gram`,
+      requestOptions
+    );
+    if (!request.ok) {
+      throw new Error(`Response Status: ${request.status}`);
+    } else {
+      const data = await request.json();
 
-// const requestOptions = {
-//   method: 'GET',
-//   headers: myHeaders,
-//   redirect: 'follow',
-// };
+      const html = `<div
+              class="gold-card border p-4 hover:-translate-y-2 transition-all rounded-lg relative border-(--accent)/20 bg-(--card)">
+              <p class="gold-weight">24K</p>
+              <p class="text-sm text-(--muted-foreground)">Pure Gold</p>
+              <!-- حركة السهم -->
+              <div class="icon absolute right-6 top-6">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trending-${
+                    data.data.metal_prices.XAU.change_percentage > 0
+                      ? 'up'
+                      : 'down'
+                  } w-5 h-5 ${
+        data.data.metal_prices.XAU.change_percentage > 0
+          ? 'text-green-500'
+          : 'text-red-500'
+      }">${
+        data.data.metal_prices.XAU.change_percentage > 0
+          ? '<polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>     <polyline points="16 7 22 7 22 13"></polyline>'
+          : '<polyline points="22 17 13.5 8.5 8.5 13.5 2 7"></polyline>       <polyline points="16 17 22 17 22 11"></polyline>'
+      }
+                </svg>
+              </div>
+              <!-- Per Ounce Container -->
+              <div
+                class="border p-2.5 rounded-xl my-4 bg-(--accent)/5 border-(--accent)/10">
+                <p class="text-xs text-(--muted-foreground) mb-1">Per Ounce</p>
+                <p class="font-bold text-xl text-(--accent)">${
+                  data.data.base_currency
+                } ${(data.data.metal_prices.XAU.price_24k * 31.101).toFixed(
+        2
+      )}</p>
+              </div>
+              <!-- Per Gram Container -->
+              <div class="p-2.5 bg-(--muted) rounded-lg my-4">
+                <p class="text-xs text-(--muted-foreground) mb-1">Per Gram</p>
+                <p class="font-bold text-xl">${
+                  data.data.base_currency
+                } ${data.data.metal_prices.XAU.price_24k.toFixed(2)}</p>
+              </div>
+            </div>
+            <!-- 22K Card -->
+            <div
+              class="gold-card border p-4 hover:-translate-y-2 transition-all rounded-lg relative border-[(--accent)/20 bg-(--card)">
+              <p class="gold-weight">21K</p>
+              <p class="text-sm text-(--muted-foreground)">Pure Gold</p>
+              <!-- حركة السهم -->
+              <div class="icon absolute right-6 top-6">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trending-${
+                    data.data.metal_prices.XAU.change_percentage > 0
+                      ? 'up'
+                      : 'down'
+                  } w-5 h-5 ${
+        data.data.metal_prices.XAU.change_percentage > 0
+          ? 'text-green-500'
+          : 'text-red-500'
+      }">${
+        data.data.metal_prices.XAU.change_percentage > 0
+          ? '<polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline> <polyline points="16 7 22 7 22 13"></polyline>'
+          : '<polyline points="22 17 13.5 8.5 8.5 13.5 2 7"></polyline>       <polyline points="16 17 22 17 22 11"></polyline>'
+      }
+                </svg>
+              </div>
+              <!-- Per Ounce Container -->
+              <div
+                class="border p-2.5 rounded-xl my-4 bg-(--accent)/5 border-(--accent)/10">
+                <p class="text-xs text-(--muted-foreground) mb-1">Per Ounce</p>
+                <p class="font-bold text-xl text-(--accent)">${
+                  data.data.base_currency
+                } ${(data.data.metal_prices.XAU.price_21k * 31.101).toFixed(
+        2
+      )}</p>
+              </div>
+              <!-- Per Gram Container -->
+              <div class="p-2.5 bg-(--muted) rounded-lg my-4">
+                <p class="text-xs text-(--muted-foreground) mb-1">Per Gram</p>
+                <p class="font-bold text-xl">${
+                  data.data.base_currency
+                } ${data.data.metal_prices.XAU.price_21k.toFixed(2)}</p>
+              </div>
+            </div>
+            <!-- 18K Card -->
+            <div
+              class="gold-card border p-4 hover:-translate-y-2 transition-all rounded-lg relative border-(--accent)/20 bg-(--card)">
+              <p class="gold-weight">18K</p>
+              <p class="text-sm text-(--muted-foreground)">Pure Gold</p>
+              <!-- حركة السهم -->
+              <div class="icon absolute right-6 top-6">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trending-${
+                    data.data.metal_prices.XAU.change_percentage > 0
+                      ? 'up'
+                      : 'down'
+                  } w-5 h-5 ${
+        data.data.metal_prices.XAU.change_percentage > 0
+          ? 'text-green-500'
+          : 'text-red-500'
+      }">${
+        data.data.metal_prices.XAU.change_percentage > 0
+          ? '<polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline>'
+          : '<polyline points="22 17 13.5 8.5 8.5 13.5 2 7"></polyline>       <polyline points="16 17 22 17 22 11"></polyline>'
+      }
+                </svg>
+              </div>
+              <!-- Per Ounce Container -->
+              <div
+                class="border p-2.5 rounded-xl my-4 bg-(--accent)/5 border-(--accent)/10">
+                <p class="text-xs text-(--muted-foreground) mb-1">Per Ounce</p>
+                <p class="font-bold text-xl text-(--accent)">${
+                  data.data.base_currency
+                } ${(data.data.metal_prices.XAU.price_18k * 31.101).toFixed(
+        2
+      )}</p>
+              </div>
+              <!-- Per Gram Container -->
+              <div class="p-2.5 bg-(--muted) rounded-lg my-4">
+                <p class="text-xs text-(--muted-foreground) mb-1">Per Gram</p>
+                <p class="font-bold text-xl">${
+                  data.data.base_currency
+                } ${data.data.metal_prices.XAU.price_18k.toFixed(2)}</p>
+              </div>
+            </div>
+          </div>`;
 
-// fetch(
-//   `https://gold.g.apised.com/v1/latest?metals=XAU&base_currency=${}&weight_unit=gram`,
-//   requestOptions
-// )
-//   .then((response) => response.text())
-//   .then((result) => console.log(result))
-//   .catch((error) => console.error(error));
+      goldCards.insertAdjacentHTML('afterbegin', html);
+    }
+  } catch (err) {
+    console.log(`Error: ${err.message}`);
+  }
+}
+getGoldPrice();
+currencySelection.addEventListener('change', getGoldPrice);
+
+/*<p class="text-center ${
+                data.data.metal_prices.XAU.change_percentage > 0
+                  ? 'text-green-500'
+                  : 'text-red-500'
+              } font-bold text-sm">
+                ${data.data.metal_prices.XAU.change_percentage.toFixed(
+                  2
+                )}% Today
+              </p>*/
